@@ -111,7 +111,7 @@ This will show you a log with details about errors (if any) and changes that wou
 
 - GitHub: [Nitcelis Bravo](https://github.com/NitBravoA92)
 - Twitter: [@softwareDevOne](https://twitter.com/softwareDevOne)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/nitcelis-bravo-alcala-b65340158)
+- LinkedIn: [Nitcelis Bravo Alcala](https://www.linkedin.com/in/nitcelis-bravo-alcala-b65340158)
 
 👤 **Manuel Sánchez**
 

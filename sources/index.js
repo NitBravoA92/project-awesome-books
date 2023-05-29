@@ -58,3 +58,28 @@ function createBook(book) {
   /* Add a click listener to the remove button */
   removeButton.addEventListener('click', deleteBook);
 }
+
+books.forEach((book) => {
+  createBook(book);
+});
+
+function addBook(event) {
+  /* Create a new book */
+  const book = new Book(titleInput.value, authorInput.value);
+
+  /* If the inputs has no values then form is not submmited */
+  if (!titleInput.validity.valueMissing && !authorInput.validity.valueMissing) {
+    event.preventDefault();
+  } else {
+    return;
+  }
+
+  /* Copy the library key to the books array */
+  books.push(book);
+  localStorage.setItem('library', JSON.stringify(books));
+
+  form.reset();
+  createBook(book);
+}
+
+submitButton.addEventListener('click', addBook);

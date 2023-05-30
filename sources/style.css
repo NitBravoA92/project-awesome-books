@@ -1,5 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #0e0e0e;
+  font-size: 14px;
+}
+
+body, main, section {
+  width: 100%;
+}
+
+main {
+  display: grid;
+  grid-auto-rows: minmax(150px, auto);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 768px));
+  justify-content: center;
+}
+
+section {
+  padding: 3rem 1rem;
+}
+
+.section-title {
+  font-size: 3em;
+  text-align: center;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.2;
+  padding: 2.5rem 0;
+  color: #3b3bd6;
+}
+
+#books-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.book {
+  padding: 0.7rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .5s ease-out;
+  background-color: #fff;
+}
+
+.book:nth-child(even) {
+  background-color: #d0d0fe;
+}
+
+.book:hover {
+  background-color: #c1c1f1;
+}
+
+.book .book-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.book button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #a40606;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book button:hover {
+  background-color: #fff;
+  color: #650505;
+  border: 2px solid #650505;
+}
+
+.book button:active {
+  background-color: #430404;
+  color: #fff;
+  border: none;
+}
+
+#form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-book {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 0 0.1rem;
+}
+
+#form-book input {
+  width: 100%;
+  padding: 0.6rem;
+  outline: #1a1919;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 400;
+}
+
+#form-book button {
+  padding: 0.5rem 1.3rem;
+  border: none;
+  background-color: #3b3bd6;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#form-book button:hover {
+  background-color: #fff;
+  color: #3b3bd6;
+  border: 2px solid #3b3bd6;
+}
+
+#form-book button:active {
+  background-color: #2121c8;
+  color: #fff;
+  border: none;
+}
+
+#form-book button:disabled {
+  background-color: #d9d9dd;
+  color: #bcbbbb;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  #form-book {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+}
+
+@media (min-width: 992px) {
+  #form-book {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
 }

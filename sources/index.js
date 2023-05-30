@@ -1,7 +1,6 @@
 const mainContainer = document.querySelector('#books-container');
 const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
-const submitButton = document.querySelector('#book-submit');
 const form = document.querySelector('#form-book');
 
 class Books {
@@ -9,98 +8,86 @@ class Books {
     this.books = [];
 
     if (localStorage.getItem('library')) {
-      /* Reasign the books array to the localStorage library */
+      // Re-assign the books array to the localStorage library
       this.books = JSON.parse(localStorage.getItem('library'));
     }
   }
 
-  info(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-
-  /* A method to save the info in the local storage */
-  storage() {
-    this.books.push({ title: `${this.title}`, author: `${this.author}` });
+  // A method to save the info in the local storage
+  storage(book) {
+    this.books.push(book);
     localStorage.setItem('library', JSON.stringify(this.books));
   }
 
-  /* Function that creates a book */
+  // Function that creates a book
   createBook(book) {
-    /* Create elements */
+    // Create the html elements
     const bookContainer = document.createElement('div');
     const bookDetails = document.createElement('div');
     const pTitle = document.createElement('h3');
     const pAuthor = document.createElement('p');
     const removeButton = document.createElement('button');
 
-    /* Add Classes and properties */
+    // Add Classes and properties
     bookContainer.classList.add('book');
     bookDetails.classList.add('book-details');
+    removeButton.classList.add('removeBook');
     removeButton.tabIndex = this.books.indexOf(book);
-    removeButton.name = book.title;
 
-    /* Add text */
+    // Add text
     pTitle.textContent = book.title;
     pAuthor.textContent = `by ${book.author}`;
     removeButton.textContent = 'Remove';
 
-    /* Append elements */
+    // Append elements
     bookDetails.appendChild(pTitle);
     bookDetails.appendChild(pAuthor);
     bookContainer.appendChild(bookDetails);
     bookContainer.appendChild(removeButton);
     mainContainer.appendChild(bookContainer);
 
-    /* A remove book function */
+    // A remove book function
     const deleteBook = () => {
-      if (removeButton.name === book.title) {
-        bookContainer.remove();
-
-        /* Split and join the array */
-        const index = removeButton.tabIndex;
-        this.books = [...this.books.slice(0, index), ...this.books.slice(index + 1)];
-        localStorage.setItem('library', JSON.stringify(this.books));
-      }
+      const index = removeButton.tabIndex;
+      bookContainer.remove();
+      // Split and join the array
+      this.books = [
+        ...this.books.slice(0, index),
+        ...this.books.slice(index + 1),
+      ];
+      localStorage.setItem('library', JSON.stringify(this.books));
+      this.displayBooks();
     };
-
-    /* Add a click listener to the remove button */
+    // Add a click listener to the remove button
     removeButton.addEventListener('click', deleteBook);
   }
 
-  /* A method that displays all the books elements */
+  // A method that displays all the books elements
   displayBooks() {
+    mainContainer.innerHTML = '';
     this.books.forEach((book) => {
       this.createBook(book);
     });
   }
 }
 
-/* A instance of the class that displays the added books */
+// A instance of the class that displays the added books
 const myBooks = new Books();
 myBooks.displayBooks();
 
-/* A function that is called when the user clicks the submit button */
+// A function that is called when the user clicks the submit button
 function addBook(event) {
-  /* Create a new book */
-  const book = new Books();
-  book.info(titleInput.value, authorInput.value);
-
-  /* If the inputs has no values then form is not submmited */
+  // If the inputs has values then form is submitted
   if (!titleInput.validity.valueMissing && !authorInput.validity.valueMissing) {
     event.preventDefault();
-  } else {
-    return;
+    // Create a new book
+    const book = { title: titleInput.value, author: authorInput.value };
+    // Save the book in the array and the local storage
+    myBooks.storage(book);
+    // Resets the form
+    form.reset();
+    // Creates the new book element
+    myBooks.createBook(book);
   }
-
-  /* Save the book in the array and the local storage */
-  book.storage();
-
-  /* Resets the form */
-  form.reset();
-
-  /* Creates the new book element */
-  book.createBook(book);
 }
-
-submitButton.addEventListener('click', addBook);
+form.addEventListener('submit', addBook);

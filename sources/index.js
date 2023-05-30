@@ -4,7 +4,21 @@ const authorInput = document.querySelector('#author');
 const submitButton = document.querySelector('#book-submit');
 const form = document.querySelector('#form-book');
 
-let books = [];
+class Books {
+  constructor() {
+    this.books = [];
+
+    if (localStorage.getItem('library')) {
+      /* Reasign the books array to the localStorage library */
+      this.books = JSON.parse(localStorage.getItem('library'));
+    }
+  }
+
+  info(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+}
 
 if (localStorage.getItem('library')) {
   /* Reasign the books array to the localStorage library */

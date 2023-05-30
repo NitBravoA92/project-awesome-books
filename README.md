@@ -24,7 +24,7 @@
 
 # 📖 Awesome Books <a name="about-project"></a>
 
-**Portfolio Website** This project consists of building a Books webpage with HTML, CSS and JS that allows users to add and remove books from a list.
+**Awesome Books Webpage** is a project that consists of building a Books webpage with HTML, CSS and JS that allows users to add and remove books from a list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -131,9 +131,10 @@ This will show you a log with details about errors (if any) and changes that wou
 
 - [x] **Add Client side validations to the Add new Book form**
 - [x] **Implement the persistence of Books data using Local storage**
-- [ ] **Add css styles in All awesome books section**
-- [ ] **Add css styles in Add a new Book section**
+- [x] **Add css styles in All awesome books section**
+- [x] **Add css styles in Add a new Book section**
 - [ ] **Create the Contact Information section**
+- [ ] **Create the Navigation bar section**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

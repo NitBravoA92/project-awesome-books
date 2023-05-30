@@ -10,17 +10,24 @@
 </head>
 
 <body>
-  <h1>Awesome Books</h1>
-  <div id="books-container">
+  <main>
+    <section id="all-awesome-books">
+      <h1 class="section-title">All awesome books</h1>
+      <div id="books-container">
 
-  </div>
-  <div id="form-container">
-    <form id="form-book">
-      <input type="text" id="title" placeholder="Title" required> <br> <br>
-      <input type="text" id="author" placeholder="Author" required> <br> <br>
-      <button type="submit" id="book-submit">Add Book</button>
-    </form>
-  </div>
+      </div>
+    </section>
+    <section id="add-new-book">
+      <h2 class="section-title">Add a new book</h2>
+      <div id="form-container">
+        <form id="form-book" action="#">
+          <input type="text" id="title" placeholder="Title" required> <br> <br>
+          <input type="text" id="author" placeholder="Author" required> <br> <br>
+          <button type="submit" id="book-submit">Add</button>
+        </form>
+      </div>
+    </section>
+  </main>
   <script src="./sources/index.js"></script>
 </body>
 

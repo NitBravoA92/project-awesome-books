@@ -25,8 +25,8 @@ class Books {
     localStorage.setItem('library', JSON.stringify(this.books));
   }
 
-   /* Function that creates a book */
-   createBook(book) {
+  /* Function that creates a book */
+  createBook(book) {
     /* Create elements */
     const bookContainer = document.createElement('div');
     const bookDetails = document.createElement('div');
@@ -76,7 +76,6 @@ class Books {
   }
 }
 
-
 /* A instance of the class that displays the added books */
 const myBooks = new Books();
 myBooks.displayBooks();
@@ -105,4 +104,3 @@ function addBook(event) {
 }
 
 submitButton.addEventListener('click', addBook);
-

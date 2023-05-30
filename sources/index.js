@@ -21,13 +21,14 @@ function Book(title, author) {
 function createBook(book) {
   /* Create elements */
   const bookContainer = document.createElement('div');
-  const pTitle = document.createElement('p');
+  const bookDetails = document.createElement('div');
+  const pTitle = document.createElement('h3');
   const pAuthor = document.createElement('p');
   const removeButton = document.createElement('button');
-  const hr = document.createElement('hr');
 
   /* Add Classes and properties */
-  bookContainer.classList.add('books');
+  bookContainer.classList.add('book');
+  bookDetails.classList.add('book-details');
   removeButton.tabIndex = books.indexOf(book);
   removeButton.name = book.title;
 
@@ -37,10 +38,10 @@ function createBook(book) {
   removeButton.textContent = 'Remove';
 
   /* Append elements */
-  bookContainer.appendChild(pTitle);
-  bookContainer.appendChild(pAuthor);
+  bookDetails.appendChild(pTitle);
+  bookDetails.appendChild(pAuthor);
+  bookContainer.appendChild(bookDetails);
   bookContainer.appendChild(removeButton);
-  bookContainer.appendChild(hr);
   mainContainer.appendChild(bookContainer);
 
   /* A remove book function */

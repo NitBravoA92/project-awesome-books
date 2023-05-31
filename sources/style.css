@@ -32,6 +32,43 @@ section {
   padding: 3rem 1rem;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid blue;
+  padding: 10px 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+#nav-section {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-sections:not(:first-child) {
+  padding-left: 10px;
+  border-left: 1px solid black;
+}
+
+.nav-sections:hover {
+  cursor: pointer;
+}
+
+#date {
+  text-align: right;
+}
+
+.hide {
+  display: none;
+}
+
+.change-color {
+  color: blue;
+}
+
 .section-title {
   font-size: 3em;
   text-align: center;

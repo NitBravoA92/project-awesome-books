@@ -192,7 +192,8 @@ footer {
   border: none;
 }
 
-#contact h2, h3 {
+#contact h2,
+h3 {
   color: #3b3bd6;
 }
 

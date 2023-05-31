@@ -8,6 +8,10 @@
   margin: 0;
 }
 
+html {
+  padding: 10px 10px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fff;
@@ -26,10 +30,53 @@ main {
   grid-auto-rows: minmax(150px, auto);
   grid-template-columns: repeat(auto-fit, minmax(320px, 768px));
   justify-content: center;
+  min-height: calc(100vh - (64px + 64px));
 }
 
 section {
   padding: 3rem 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid blue;
+  padding: 10px 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  border: 1px solid blue;
+  padding: 10px 10px;
+}
+
+#nav-section {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-sections:not(:first-child) {
+  padding-left: 10px;
+  border-left: 1px solid black;
+}
+
+.nav-sections:hover {
+  cursor: pointer;
+}
+
+#date {
+  text-align: right;
+}
+
+.hide {
+  display: none;
+}
+
+.change-color {
+  color: blue;
 }
 
 .section-title {

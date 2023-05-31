@@ -43,6 +43,11 @@ ul {
   list-style: none;
 }
 
+footer {
+  border: 1px solid blue;
+  padding: 10px 10px;
+}
+
 #nav-section {
   display: flex;
   gap: 10px;

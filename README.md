@@ -24,7 +24,7 @@
 
 # 📖 Awesome Books <a name="about-project"></a>
 
-**Awesome Books Webpage** is a project that consists of building a Books webpage with HTML, CSS and JS that allows users to add and remove books from a list.
+**Awesome Books Webpage** is a project that consists of building a single page application with HTML, CSS and JS that allows users to add and remove books from a list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -45,7 +45,9 @@
 - **Support for all Browsers**
 - **Use of semantic HTML in the code structure**
 - **Client side form Validations**
+- **Manage collections with Class javascript**
 - **Data persistence with LocalStorage**
+- **Single page application approach**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,6 +85,8 @@ It is also important to have at least basic knowledge of HTML, CSS and Javascrip
 - [Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 - [JavaScript Forms](https://www.w3schools.com/js/js_validation.asp)
 - [JavaScript Form Validation](https://www.javatpoint.com/javascript-form-validation)
+- [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+- [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
 ### Install
 
@@ -133,8 +137,9 @@ This will show you a log with details about errors (if any) and changes that wou
 - [x] **Implement the persistence of Books data using Local storage**
 - [x] **Add css styles in All awesome books section**
 - [x] **Add css styles in Add a new Book section**
-- [ ] **Create the Contact Information section**
-- [ ] **Create the Navigation bar section**
+- [x] **Create the Contact Information section**
+- [x] **Create the Navigation bar section**
+- [x] **Create the Navigation bar section**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
